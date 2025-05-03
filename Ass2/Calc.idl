@@ -1,0 +1,8 @@
+// Calc.idl
+
+module Calculator {
+    interface Calc {
+        long calculate(in long type, in long a, in long b);
+        void exit();
+    };
+};
