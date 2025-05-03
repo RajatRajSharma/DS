@@ -14,3 +14,13 @@
 5. tnameserv -ORBInitialPort 1050
 6. java StartServer -ORBInitialPort 1050 -ORBInitialHost localhost
 7. java StartClient -ORBInitialPort 1050 -ORBInitialHost localhost
+
+## Ass 3 : MPI
+1. Download from: http://mpj-express.org
+2. Set environment variables MPJ_HOME, and add $MPJ_HOME/bin to your PATH.
+3. javac -cp .:$MPJ_HOME/lib/mpj.jar SumArray.java HelloMessage.java
+4. mpjrun.sh -np 4 SumArray
+5. mpjrun.sh -np 4 HelloMessage
+
+## Ass 5 : Clock Syncronization
+1.
