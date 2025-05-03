@@ -28,4 +28,9 @@
 3. java ClockClient
 
 ## Ass 5 : Mutual Exclusion
-1. 
+1. javac -target 1.8 -source 1.8 *.java
+2. java TokenServer1
+3. java TokenClient1
+
+## Ass 6 : Election Algo Bully and Ring Algo
+1.
