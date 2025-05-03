@@ -22,5 +22,10 @@
 4. mpjrun.sh -np 4 SumArray
 5. mpjrun.sh -np 4 HelloMessage
 
-## Ass 5 : Clock Syncronization
-1.
+## Ass 4 : Clock Syncronization
+1. javac -target 1.8 -source 1.8 ClockServer.java ClockClient.java
+2. java ClockServer
+3. java ClockClient
+
+## Ass 5 : Mutual Exclusion
+1. 
