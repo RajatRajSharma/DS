@@ -1,3 +1,9 @@
+// javac -target 1.8 -source 1.8 *.java
+// java Bully
+// java Ring
+
+// Bully.java
+
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;

@@ -1,3 +1,9 @@
+// javac -target 1.8 -source 1.8 *.java
+// java Bully
+// java Ring
+
+// Ring.java
+
 import java.util.Scanner;
 
 public class Ring {

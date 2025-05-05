@@ -1,3 +1,9 @@
+// javac -target 1.8 -source 1.8 ClockServer.java ClockClient.java
+// java ClockServer
+// java ClockClient
+
+// ClockServer.java
+
 import java.io.*;
 import java.net.*;
 import java.text.SimpleDateFormat;

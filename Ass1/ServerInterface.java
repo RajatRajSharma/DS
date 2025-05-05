@@ -1,3 +1,9 @@
+// javac *.java || javac -target 1.8 -source 1.8 *.java
+// start rmiregistry || rmiregistry & 
+// java Server
+// java Client
+// On Server give "localhost"
+
 // ServerInterface.java
 import java.rmi.*;
 

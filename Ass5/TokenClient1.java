@@ -1,3 +1,8 @@
+// javac -target 1.8 -source 1.8 *.java
+// java TokenServer1
+// java TokenClient1
+
+// TokenClient1.java
 import java.io.*;
 import java.net.*;
 
@@ -21,20 +26,20 @@ public class TokenClient1 {
             tkser.setSendPort(9000);
             if (tkcl.hasToken == true) {
 
-                System.out.println("Do you want to enter the Data –> YES/NO");
+                System.out.println("Do you want to enter the Data => YES/NO");
                 br = new BufferedReader(new InputStreamReader(System.in));
                 str = br.readLine();
                 if (str.equalsIgnoreCase("yes")) {
-                    System.out.println("ready to send");
+                    System.out.println("Status: Ready to send data");
                     tkser.setSendData = true;
                     tkser.sendData();
                     tkser.setSendData = false;
                 } else if (str.equalsIgnoreCase("no")) {
-                    System.out.println("i m in else");
+                    System.out.println("Status: In else block, will only send token and wait for it to return");
                     // tkcl.hasToken=false;
                     tkcl.sendData();
                     tkcl.recData();
-                    System.out.println("i m leaving else");
+                    System.out.println("Status: Leaving else block as, I recived the else token back");
                 }
             } else {
                 System.out.println("ENTERING RECEIVING MODE…");

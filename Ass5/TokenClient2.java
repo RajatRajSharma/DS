@@ -1,3 +1,8 @@
+// javac -target 1.8 -source 1.8 *.java
+// java TokenServer1
+// java TokenClient1
+
+// TokenClient2.java
 import java.io.*;
 import java.net.*;
 
@@ -19,14 +24,14 @@ public class TokenClient2 {
             lclhost = InetAddress.getLocalHost();
             ser = new TokenClient21(lclhost);
             ser.setSendPort(9000);
-            System.out.println("entering if");
+            // System.out.println("entering if");
             if (hasToken == true) {
 
-                System.out.println("Do you want to enter the Data –> YES/NO");
+                System.out.println("Do you want to enter the Data => YES/NO");
                 br = new BufferedReader(new InputStreamReader(System.in));
                 str1 = br.readLine();
                 if (str1.equalsIgnoreCase("yes")) {
-                    System.out.println("ignorecase");
+                    // System.out.println("ignorecase");
                     ser.setSendData = true;
                     ser.sendData();
                 } else if (str1.equalsIgnoreCase("no")) {
@@ -34,7 +39,7 @@ public class TokenClient2 {
                     hasToken = false;
                 }
             } else {
-                System.out.println("entering recieving mode");
+                System.out.println("Status: Entering recieving mode, as i don't have a token currently");
                 tkcl.recData();
                 hasToken = true;
             }
@@ -64,14 +69,14 @@ class TokenClient21 {
     }
 
     void sendData() throws Exception {
-        System.out.println("case");
+        // System.out.println("case");
         BufferedReader br;
         String str = "Token";
         DatagramSocket ds;
         DatagramPacket dp;
 
         if (setSendData == true) {
-            System.out.println("Enter the Data");
+            System.out.println("Enter the Data : ");
             br = new BufferedReader(new InputStreamReader(System.in));
             str = "ClientTwo….." + br.readLine();
         }
@@ -79,7 +84,7 @@ class TokenClient21 {
         dp = new DatagramPacket(str.getBytes(), str.length(), lclhost, sendport - 1000);
         ds.send(dp);
         ds.close();
-        System.out.println("Data Sent");
+        System.out.println("Data Sent successfully");
         setSendData = false;
         hasToken = false;
 

@@ -1,3 +1,14 @@
+// java -version // "1.8.0_202"
+// java -version // 1.8.0_202
+// idlj -version // IDL-to-Java compiler (portable), version "3.2"
+// idlj -fall Calc.idl
+// javac -cp "C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar" Calculator/*.java *.java
+// tnameserv -ORBInitialPort 1050
+// java StartServer -ORBInitialPort 1050 -ORBInitialHost localhost
+// java StartClient -ORBInitialPort 1050 -ORBInitialHost localhost
+
+// StartClient.java
+
 import Calculator.*;
 import org.omg.CosNaming.*;
 import org.omg.CORBA.*;

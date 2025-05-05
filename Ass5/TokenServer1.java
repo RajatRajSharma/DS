@@ -1,3 +1,8 @@
+// javac -target 1.8 -source 1.8 *.java
+// java TokenServer1
+// java TokenClient1
+
+// TokenServer1.java
 import java.io.*;
 import java.net.*;
 
@@ -34,6 +39,6 @@ class Server {
         ds.close();
 
         str = new String(dp.getData(), 0, dp.getLength());
-        System.out.println("The message is " + str);
+        System.out.println("The message is : " + str);
     }
 }
